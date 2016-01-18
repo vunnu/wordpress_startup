@@ -1,0 +1,99 @@
+@import "bootstrap";
+
+*{
+ word-wrap: break-word;
+}
+
+.img-inline{
+  display: inline !important;
+}
+
+.title{
+  word-wrap: normal;
+}
+
+.text-content{
+  @include scale-font(2.6);
+  p{
+    @include scale-font(2.6);
+    line-height: 30px;
+  }
+}
+
+.no-border{
+  border: none !important;
+}
+
+.wpcf7-form{
+  .btn-submit{
+    width: 100%;
+    background-color: #856c4e;
+    @include scale-font(1.4);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 14px 0;
+    text-align: center;
+  }
+}
+
+#swipebox-overlay{
+  background: rgba(13, 13, 13, 0.9);
+}
+
+.room-attributes{
+
+  .title-block{
+    margin-left: 0px;
+    .title{
+      margin-bottom: 20px;
+      @media screen and (min-width: 1360px){
+        margin-bottom: 52px;
+      }
+      @include scale-font(2.4);
+      font-weight: bold;
+      color: #000000;
+      text-transform: uppercase;
+      width: 100%;
+    }
+  }
+  &.row{
+    >div{
+
+      margin-bottom: 5px;
+
+      @media screen and (max-width: $screen-lg) {
+        min-height: 110px;
+      }
+
+      @media screen and (min-width: 1360px){
+        margin-bottom: 25px;
+      }
+
+      .img-container{
+        display: inline;
+        @media screen and (max-width: $screen-sm){
+          display: block;
+        }
+        width: 100%;
+        margin: 0 auto;
+        width: 72px;
+        height: 47px;
+        img{
+          margin: 0 auto;
+          margin-bottom: 5px;
+        }
+      }
+      span{
+        @include scale-font(1.6);
+        color: #000000;
+        word-wrap: normal;
+      }
+    }
+  }
+
+  &.block{
+    border-bottom: none;
+  }
+}
+

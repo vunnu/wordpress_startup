@@ -1,0 +1,269 @@
+/*===============================PARAMS=======================================*/
+
+$max-container-width: 1145px;
+
+$font-family-base: 'Open Sans', sans-serif;
+$font-family-deco: Streetwear;
+$font-family-deco-text: 'Exo 2', sans-serif;;
+
+$font-size-base: 12px;
+$font-size-header-big: $font-size-base * 3;
+$font-size-header: $font-size-base * 2;
+$font-size-sub-header: $font-size-base * 1.2;
+
+
+$side-menu-width: 80px;
+$smaller_logo_size: 45px;
+$logo_container_height: 114px;
+
+//--------GRID
+$ContainerPhone: 360px;
+$screen-tn: 0px;
+$screen-tn-min: ($screen-tn);
+$screen-tn-max: 480px;
+$screen-xs-min: ($screen-tn-max);
+
+$screen-llg: 1360px;
+$screen-llg-min: ($screen-llg);
+$screen-lg-max: ($screen-llg-min - 1);
+
+$screen-ulg: 1870px;
+$screen-ulg-min: ($screen-ulg);
+$screen-llg-max: ($screen-ulg-min - 1);
+
+
+$container-large-large-desktop: (1300px + 60px);
+$container-ultra-large-desktop: (1810px + 60px);
+//** For `$screen-lg-lg-min` and up.
+$container-llg:                 $container-large-large-desktop;
+$container-ulg:                 $container-ultra-large-desktop;
+
+
+//------- FONTS
+$font-family:				  	    'Josefin Sans', sans-serif;
+$font:						  		normal 12px/14px $font-family;
+$font-custom:                 		'Open Sans', sans-serif;
+$font-icon:                   		"FontAwesome";
+$fa-css-prefix:       				icon !default;
+
+$font-family-sans-serif:	$font-family;
+$font-family-serif:			$font-family-sans-serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:        $font-family-sans-serif;
+
+
+
+
+$font-size-base:          12px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.4)) !default; // ~28px
+$font-size-h2:            floor(($font-size-base * 2)) !default; // ~24px
+$font-size-h3:            ceil(($font-size-base * 1.5)) !default; // ~18px
+$font-size-h4:            ceil(($font-size-base * 1.2)) !default; // ~14px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~10px
+
+
+//--------COLORS
+$gray-base:              #3B3429 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$base-body-color:                   #777777;
+$base-text-color:                   #8E8E8E;
+$base-heading-color:				#8C8C8C;
+$base-title-color:					$base-text-color;
+$light-text-color:                  #fff;
+$description-color:					#666;
+
+$brand-primary:						#856C4E;
+
+//-------- BORDERS
+$border-radius-base:        		0px;
+$border-radius-large:               0px;
+$border-radius-small:               0px;
+$base-border-color:					#D7D7D7;
+$main_border:						3px solid $base-border-color;
+$dark-border-color:					#333;
+$light-border-color:				#fff;
+$homepage-footer-border:            #d9d9d9;
+
+//--------- BACKGROUNDS
+$base-box-bg:                       #fbfbfb;
+$table-background:                  $base-box-bg;
+$dark-background:                   #333;
+$light-background:                  #fff;
+$homepage-footer-bg:                #f2f2f2;
+
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #fff !default;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       $brand-primary !default;
+
+
+//--------- Indents
+$base-box-padding:                  14px 18px 13px;
+$base-box-indent:                  	0 0 30px 0;
+
+//---------- Product Elements
+$product-name-color:                #3a3939;
+$product-name-hover-color:          #515151;
+$price-color:						$base-body-color;
+$product-price-color:				$base-text-color;
+$product-reduced-price:				#f00;
+$product-special-price-color:		#f13340;
+$product-old-price-color:			#6f6f6f;
+
+//---------- Buttons
+$btn-default-color:              #fff;
+$btn-default-bg:                 #856C4E;
+$btn-default-border:             #856C4E;
+
+
+$button-text-color:					$light-text-color;
+
+//------ Buttons +/- ---
+$button-pm-color:			#c0c0c0;
+$button-pm-hover-color:		$base-text-color;
+
+//------ Button Small --
+$button-small-bg:			#6f6f6f;
+$button-small-hover-bg:		#575757;
+
+//-------Button exclusive-medium
+$button-em-color:			$base-text-color;
+
+//---------- Product Listing
+$base-listing-border-color:					$base-border-color;
+$base-listing-grid-padding:					$base-box-padding;
+
+//-------------- Grid/List vars
+$GL-text-color:								#808080;
+$GL-title-color:							$base-text-color;
+$GL-icon-color:								#e1e0e0;
+$GL-icon-color-hover:						$base-text-color;
+
+//-------------- Pagination vars
+$pagination-prevnext-color:					#777676;
+$pagination-bgcolor:	               		$base-box-bg;
+$pagination-hover-bg:						#f6f6f6;
+
+
+//----------INPUTS
+$input-border:										#E0E8EA;
+$input-border-focus:             $btn-default-border !default;
+//** Placeholder text color
+$input-color-placeholder:        darken($input-border, 10) !default;
+
+
+
+//---------- Product Info
+$top-line-color:									#C4C4C4;
+$product-image-border:								#dbdbdb;
+$scroll-button-color:								#c0c0c0;
+$list-info-bg:										#f6f6f6;
+$scroll-button-hover-color:							$base-text-color;
+$tr-even-bg:										#fdfdfd;
+
+
+//---------- Dropdowns
+
+//** Background for the dropdown menu.
+$dropdown-bg:					#856C4E;
+//** Dropdown menu `border-color`.
+$dropdown-border:                rgba(0,0,0,.15) !default;
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border:       #ccc !default;
+//** Divider color for between dropdown items.
+$dropdown-divider-bg:            #e5e5e5 !default;
+
+//** Dropdown link text color.
+$dropdown-link-color:            #ffffff !default;
+//** Hover color for dropdown links.
+$dropdown-link-hover-color:      darken($dropdown-link-color, 5%) !default;
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg:         #856C4E;
+
+//** Active dropdown menu item text color.
+$dropdown-link-active-color:     $component-active-color !default;
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $component-active-bg !default;
+
+//** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color:   $gray-light !default;
+
+//** Text color for headers within dropdown menus.
+$dropdown-header-color:          $gray-light !default;
+
+//** Deprecated `$dropdown-caret-color` as of v3.1.0
+$dropdown-caret-color:           #000 !default;
+
+
+
+//---------- Navbar
+// Basics of a navbar
+$navbar-height:                    50px;
+$navbar-border-radius:             0;
+$navbar-collapse-max-height:       340px;
+
+$navbar-default-color:             #777;
+$navbar-default-bg:                #f8f8f8;
+$navbar-default-border:            darken($navbar-default-bg, 6.5%);
+
+// Navbar links
+$navbar-default-link-color:                #949494;
+$navbar-default-link-hover-color:          #80796D;
+$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-active-color:         #80796D;
+$navbar-default-link-active-bg:            transparent;
+$navbar-default-link-disabled-color:       #ccc;
+$navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+$navbar-default-brand-color:               #ffffff;
+$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%);
+$navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           #ddd;
+$navbar-default-toggle-icon-bar-bg:        #888;
+$navbar-default-toggle-border-color:       #ddd;
+
+
+//== Pills
+$nav-pills-border-radius:                   $border-radius-base !default;
+$nav-pills-active-link-hover-bg:            #EFEFEF !default;
+$nav-pills-active-link-hover-color:         #816947 !default;
+
+//sub heading (h2,h3) define
+@mixin sub-heading {
+  color: $base-heading-color;
+  text-transform: uppercase;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 14px 20px 17px;
+  margin: 0 0 20px;
+  position: relative;
+  border: 1px solid $base-border-color;
+  border-bottom: none;
+  background: $base-box-bg;
+}
+
+@mixin scale-font($scale){
+  font-size: $scale + rem;
+  line-height: $scale + rem;
+}

@@ -1,0 +1,335 @@
+@import "bootstrap";
+
+
+.front-blocks {
+  .block {
+    position: relative;
+    & > h3 {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      float: right;
+
+    }
+    @media screen and (max-width: $screen-xs) {
+      min-height: 300px;
+    }
+    @media screen and (min-width: $screen-xs) and (max-width: 992px) {
+      height: 300px;
+    }
+    &:hover {
+
+      .hover-block {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        //          background-image:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.98) 28%, rgba(255, 255, 255, 0.5) 51%,rgba(0, 0, 0, 0.98) 72%);
+        //          background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+        //          background-color: #101010;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: block;
+        opacity: 1;
+        transition: all 300ms linear;
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    .title-block{
+      @media screen and (min-width: $screen-lg){
+        margin-top: 30px;
+        margin-left: 30px;
+      }
+
+      .title {
+        @include scale-font(2.6);
+        font-weight: bold;
+        color: #000000;
+        padding-left: 5px;
+        text-transform: uppercase;
+        @media screen and (min-width: 1700px){
+          width: 50%;
+        }
+        a{
+          color: #000000;
+        }
+      }
+      .subtitle{
+        @include scale-font(1.8);
+        color: #000000;
+        padding-left: 5px;
+
+        ul{
+          padding-left: 20px;
+          li{
+            line-height: 2.6rem;
+          }
+        }
+      }
+      $class: subtitle !default;
+      @for $i from 1 through 6{
+        .#{$class} + h#{$i}{
+          @include scale-font(2.6);
+          color: #856c4e;
+          margin-top: 0;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .hover{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      right: 0;
+      background-color: #856C4E;
+      font-size: 1.6rem;
+      text-align: left;
+      font-weight: bold;
+
+      a{
+        color: #ffffff;
+      }
+
+      span{
+        display: block;
+        padding: 10px 15px;
+        text-transform: uppercase;
+      }
+    }
+
+    @media screen and (min-width: $screen-md){
+      .hover{
+        max-height: 0;
+
+        a{
+          display: none;
+        }
+
+        span{
+          display: none;
+        }
+      }
+      &:hover{
+        >.hover{
+          transition: max-height 0.7s ease-in-out;
+          max-height: 100px;
+          overflow-y: hidden;
+
+          a{
+            display: block;
+          }
+
+          span{
+            display: block;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: $screen-md){
+      .hover{
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+
+.front-blocks{
+  .block{
+    @media screen and (min-width: $screen-xs){
+      height: 100%;
+    }
+    background-color: #EFEFEF;
+    border: 3px solid #ffffff;
+    background-color: #ffffff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .room-attributes{
+
+    display: inline-table;
+    background-color: #EFEFEF;
+    .title-block{
+      margin-left: 0px;
+      .title{
+        margin-bottom: 20px;
+        @media screen and (max-width: $screen-lg){
+          margin-bottom: 10px;
+        }
+        @media screen and (min-width: 1360px){
+          margin-bottom: 52px;
+        }
+        @include scale-font(2.4);
+        font-weight: bold;
+        color: #000000;
+        text-transform: uppercase;
+        width: 100%;
+      }
+    }
+    .row{
+      >div{
+
+        margin-bottom: 15px;
+
+        @media screen and (min-width: $screen-md) and (max-width: $screen-llg){
+          margin-bottom: 0px;
+          min-height: 90px;
+        }
+
+        @media screen and (min-width: 1690px){
+          margin-bottom: 25px;
+        }
+
+        @media screen and (max-width: $screen-md){
+          margin-bottom: 5px;
+          min-height: 115px;
+
+          .img-container{
+            display: block;
+            margin-bottom: 5px;
+            @media screen and (max-width: $screen-sm){
+              margin: 0 auto;
+            }
+            img{
+              margin: 0 auto;
+              //@media screen and (min-width: $screen-md){
+              //  padding-right: 15px;
+              //}
+            }
+          }
+          span{
+            @include scale-font(1.6);
+            color: #000000;
+            text-align: center;
+            display: block;
+            width: 100%;
+            //@media screen and (max-width: $screen-sm){
+            //  padding: 0 10px;
+            //  display: block;
+            //}
+          }
+        }
+
+        @media screen and (min-width: $screen-md){
+
+          span{
+            @include scale-font(1.6);
+            float: left;
+            width: 100%;
+            text-align: center;
+          }
+          .img-container{
+            img{
+              margin: 0 auto;
+            }
+          }
+        }
+        @media screen and (min-width: $screen-llg){
+
+          .img-container{
+            width: 72px;
+            height: 47px;
+            img{
+              padding-right: 15px;
+            }
+          }
+
+          span{
+
+            width: 115px;
+            height: 47px;
+          }
+        }
+      }
+    }
+
+    &.block{
+      border-bottom: none;
+      border-left: none;
+    }
+  }
+
+  .page-blocks{
+    div{
+      margin: 0;
+      padding: 0 0 0 5px;
+    }
+    img{
+      max-height: 305px;
+      margin: 0 auto;
+    }
+    .block{
+      @media screen and (min-width: $screen-xs){
+        width: 50%;
+        height: 50%;
+      }
+      border-top: none;
+    }
+  }
+
+  .announcement-block{
+    &.block{
+      @media screen and (min-width: $screen-xs){
+        height: 100%;
+      }
+      border-bottom: none;
+    }
+  }
+
+  .block{
+    min-height: 220px;
+    @media screen and (min-width: $screen-sm){
+      //min-height: 0px;
+    }
+  }
+}
+
+.page-container{
+  .block{
+    @media screen and (max-width: $screen-xs){
+      padding-bottom: 45px !important;
+    }
+  }
+}
+
+
+// Mobile front fallback
+
+@media screen and (min-width: $screen-md) and (max-height: 850px){
+
+  .logo{
+    position: absolute;
+  }
+
+  .front-page{
+    position: relative !important;
+  }
+
+  .front-blocks{
+
+    .block{
+      min-height: 305px;
+    }
+
+    .reservation-form,
+    .logo-block{
+      min-height: 610px;
+    }
+
+  }
+}

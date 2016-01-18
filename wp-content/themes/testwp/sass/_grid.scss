@@ -1,0 +1,168 @@
+//
+// Grid system
+// --------------------------------------------------
+// Minimum screen size for Extra snall screen / tablet.
+
+$screen-xs-min: ($screen-tn-max + 1);
+
+// Container width for the custom grid.
+//
+// Set the container width, and override it for fixed navbars in media queries.
+.container {
+  @media (min-width: $screen-tn-min) and (max-width: $screen-tn-max) {
+    max-width: $ContainerPhone;
+  }
+}
+
+// Function that creates the custom grid
+// Intermediate small grid
+@media (min-width: $screen-tn-min) and (max-width: $screen-tn-max) {
+  @include make-grid(tn);
+}
+
+// Add visibility "visible-tn" class for the custom grid
+@media (min-width: $screen-tn-min) and (max-width: $screen-tn-max) {
+  @include responsive-visibility('.visible-tn');
+}
+
+// Add hidden "hidden-tn" class for the custom grid
+@media (min-width: $screen-tn-min) and (max-width: $screen-tn-max) {
+  @include responsive-invisibility('.hidden-tn');
+}
+
+@media (max-width: $screen-xs-min) {
+  @include responsive-invisibility('.visible-tn');
+}
+
+
+
+@media (min-width: $screen-lg-min) and (max-width: $screen-llg-min) {
+  @include make-grid(lg);
+}
+
+@media (min-width: $screen-llg-min) and (max-width: $screen-ulg-min) {
+  @include make-grid(llg);
+}
+
+// Add visibility "visible-tn" class for the custom grid
+@media (min-width: $screen-llg-min){
+  @include responsive-visibility('.visible-llg');
+}
+// Add visibility "visible-tn" class for the custom grid
+@media (min-width: $screen-ulg-min){
+  @include responsive-visibility('.visible-ulg');
+}
+
+// Add hidden "hidden-tn" class for the custom grid
+@media (min-width: $screen-llg-min){
+  @include responsive-invisibility('.hidden-llg');
+}
+// Add hidden "hidden-tn" class for the custom grid
+@media (min-width: $screen-ulg-min){
+  @include responsive-invisibility('.hidden-ulg');
+}
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+  @media (min-width: $screen-llg-min) {
+    width: $container-llg;
+  }
+  @media (min-width: $screen-ulg-min) {
+    width: $container-ulg;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include container-fixed;
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  @include make-row;
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns;
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@media (min-width: $screen-xs-min) {
+  @include make-grid(xs);
+}
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
+}
+
+
+// Large Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-llg-min) {
+  @include make-grid(llg);
+}
+
+// Large Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-ulg-min) {
+  @include make-grid(ulg);
+}
